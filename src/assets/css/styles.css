@@ -1,0 +1,244 @@
+body {
+  background: #f3f4f5;
+  overflow: visible;
+  overflow-x: hidden;
+}
+
+.btn {
+  border-radius: 10px;
+}
+
+.navbar {
+  background: rgba(241, 242, 244, 0.8);
+  border-bottom: 1px solid #dfe3e7;
+}
+
+.ctnt {
+  background: #f3f4f5;
+}
+
+@media (min-width: 768px) {
+  .ctnt {
+    background: transparent;
+    height: 500.344px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .ctnt {
+    height: 600.344px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .ctnt {
+    height: 852.344px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .card-img {
+    transform: translate(337px);
+  }
+}
+
+.tele {
+  margin-top: 28px;
+}
+
+@media (min-width: 992px) {
+  .tele {
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  .rowlmao {
+    margin-top: 21px;
+  }
+}
+
+.rowlmao {
+}
+
+@media (max-width: 768px) {
+  .colyo {
+    /*margin-top: 15px;*/
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  .colyoextra {
+    margin-top: 15px;
+  }
+}
+
+.tele {
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+}
+
+.cardident:hover .tele {
+  transform: scale(1.1);
+}
+
+@media (min-width: 576px) {
+  .randomp {
+    max-width: 295px;
+  }
+}
+
+@media (min-width: 768px) {
+  .firsttopic {
+    font-size: 49px;
+  }
+}
+
+.descp {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.modelhi {
+  transform: translate(-48%, -50%);
+  position: absolute;
+  top: 50%;
+}
+
+.titleslol {
+  column-gap: 4px;
+}
+
+.anatomytopics {
+  max-width: 188px;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .anatomytopics {
+    max-width: 237px;
+  }
+}
+
+@media (min-width: 576px) {
+  .itemdesc {
+    font-size: 15.5px;
+  }
+}
+
+@media (min-width: 768px) {
+  .anatomytopics {
+    margin-left: 0px;
+  }
+}
+
+@media (min-width: 768px) {
+  .modelhi {
+    transform: translate(-54%, -50%);
+  }
+}
+
+@media (min-width: 992px) {
+  .modelhi {
+    transform: translate(-74%, -50%);
+  }
+}
+
+@media (min-width: 992px) {
+  .itemdesc {
+    font-size: 17.5px;
+  }
+}
+
+@media (min-width: 992px) {
+  .anatomytopics {
+    max-width: 338px;
+  }
+}
+
+@media (min-width: 992px) {
+  .itemtitles {
+    font-size: 34.376px;
+  }
+}
+
+.number {
+  width: 36px;
+}
+
+@media (min-width: 992px) {
+  .number {
+    width: 48px;
+  }
+}
+
+.controls {
+  width: fit-content;
+}
+
+@media (min-width: 344px) {
+  .controls {
+    align-self: center !important;
+  }
+}
+
+.controlarrows:hover {
+  cursor: pointer;
+}
+
+.item-transitions {
+  transition-property: opacity;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+}
+
+.modelhi2x.modelhi {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .modelhi {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .modelhi2x.modelhi {
+    display: block;
+    transform: translate(-65%, -50%);
+    width: 592px;
+  }
+}
+
+@media (min-width: 992px) {
+  .info-number {
+    width: 64px;
+    margin-right: 0px;
+  }
+}
+
+.info-number {
+  margin-right: 5px;
+}
+
+.info-cards-top {
+  height: 100%;
+}
+
+.cards-info-third-topic {
+  height: 540.984px;
+}
+
+.topics-container {
+  height: 657px;
+}
+
+@media (min-width: 1400px) {
+  .topics-container {
+    height: 779px;
+  }
+}
+

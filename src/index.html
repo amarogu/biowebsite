@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>Respiração</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/Montserrat.css" />
+    <link rel="stylesheet" href="assets/css/Animated-Type-Heading.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <link rel="stylesheet" href="assets/css/Navbar-With-Button-icons.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+
+  <body style="overflow: hidden">
+    <div
+      class="position-absolute w-100 h-100"
+      style="background-color: rgba(124, 124, 124, 0.548); z-index: 0"
+      id="backgroundNotActive"
+    ></div>
+    <div
+      class="warining position-absolute w-50 bg-white d-flex flex-column align-items-center justify-content-center top-50"
+      style="
+        height: 50vh;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        z-index: 2;
+      "
+      id="warning"
+    >
+      <p
+        class="position-absolute"
+        style="top: 24px; right: 24px; cursor: pointer"
+        id="closeBtn"
+      >
+        ✖
+      </p>
+      <h1>O site está em manutenção 🎉</h1>
+      <p class="text-center" style="max-width: 324px">
+        O site não se encontra pronto, seu conteúdo estará totalmente disponível
+        e estável no dia 25/10 📅
+      </p>
+    </div>
+    <nav class="navbar navbar-light navbar-expand-md sticky-top py-3">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#"
+          ><span class="fw-bold">Respiração</span></a
+        ><button
+          data-bs-toggle="collapse"
+          class="navbar-toggler"
+          data-bs-target="#navcol-1"
+        >
+          <span class="visually-hidden">Toggle navigation</span
+          ><span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navcol-1">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Anatomia</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Mecânica</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Química</a></li>
+          </ul>
+          <button class="btn btn-dark" type="button">
+            Responder questionário
+          </button>
+        </div>
+      </div>
+    </nav>
+    <section>
+      <img class="img-fluid d-md-none" src="assets/img/hero-mobile.png" />
+      <div
+        data-bss-scroll-zoom="true"
+        data-bss-scroll-zoom-speed="0.3"
+        style="
+          background-image: url('assets/img/hero.jpeg');
+          background-position: center;
+          background-size: cover;
+        "
+      >
+        <div
+          class="text-center d-flex flex-column justify-content-center align-items-center ctnt"
+          style="
+            padding-top: 31px;
+            padding-bottom: 31px;
+            padding-left: 12px;
+            padding-right: 12px;
+          "
+        >
+          <h1 class="display-1 fw-bold h1rando" style="max-width: 450px">
+            Sistema respiratório <br />humano
+          </h1>
+          <p class="fs-5" style="max-width: 426px">
+            Noções sobre o funcionamento do sistema respiratório humano e sua
+            anatomia.&nbsp;
+          </p>
+          <button
+            class="btn btn-dark"
+            data-bss-hover-animate="pulse"
+            type="button"
+          >
+            Saiba mais 🙏🏻
+          </button>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center py-5">
+            <p class="fs-5 fw-bold text-muted">Funções e mais</p>
+            <h2
+              class="display-6 fw-bold mb-4 firsttopic"
+              style="margin-bottom: 16px"
+            >
+              Anatomia
+            </h2>
+            <p class="fs-5 descp" style="max-width: 302px">
+              Explicação sobre os órgãos do sistema respiratório 👨🏻‍🏫
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="container containerlol">
+        <div class="row">
+          <div class="col">
+            <div
+              class="card cardident"
+              data-aos="zoom-in"
+              style="
+                background: #f7f7f7;
+                border-style: none;
+                color: rgb(33, 37, 41);
+                border-radius: 0px;
+              "
+            >
+              <div
+                class="card-body d-flex flex-column justify-content-between flex-sm-row"
+                style="
+                  position: static;
+                  padding-left: 37px;
+                  padding-right: 37px;
+                  padding-top: 29px;
+                  padding-bottom: 29px;
+                "
+              >
+                <div>
+                  <h4 class="fs-2 titlelol">Visão geral</h4>
+                  <h6 class="fs-4 text-muted mb-2 incfont">
+                    Composição do S.R.
+                  </h6>
+                  <p class="fs-5 lmao incfont disp">
+                    São órgão do sistema respiratório: fossas nasais, faringe,
+                    laringe, traqueia, brônquios, bronquíolos, alvéolos e
+                    pulmões.&nbsp;
+                  </p>
+                </div>
+                <img
+                  class="align-self-center tele"
+                  src="assets/img/3d-fluency-stethoscope.png"
+                  style="width: 242px"
+                /><img
+                  class="more"
+                  src="assets/img/icons8-plus.svg"
+                  style="
+                    position: absolute;
+                    bottom: 10px;
+                    right: 18px;
+                    cursor: pointer;
+                    transition-duration: 0.2s;
+                    transition-timing-function: ease-in-out;
+                  "
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row rowlmao">
+          <div class="col-md-6 colyo colyoextra">
+            <div
+              class="card info-cards-top"
+              data-aos="zoom-in"
+              style="border-style: none; border-radius: 0px"
+            >
+              <div class="card-body">
+                <h4 class="card-title">Fossas nasais</h4>
+                <h6 class="text-muted card-subtitle mb-2">Primeiro órgão</h6>
+                <p class="card-text randomp">
+                  Ajudar a filtrar o ar que respiramos e aquecer e umidificar o
+                  ar que chegará aos pulmões.
+                </p>
+                <img
+                  class="more"
+                  src="assets/img/icons8-plus.svg"
+                  style="
+                    position: absolute;
+                    bottom: 10px;
+                    right: 18px;
+                    cursor: pointer;
+                    transition-duration: 0.2s;
+                    transition-timing-function: ease-in-out;
+                  "
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 colyo">
+            <div
+              class="card info-cards-top"
+              data-aos="zoom-in"
+              style="border-style: none; border-radius: 0px"
+            >
+              <div class="card-body">
+                <h4 class="card-title">Faringe</h4>
+                <h6 class="text-muted card-subtitle mb-2">Segundo órgão</h6>
+                <p class="card-text randomp">
+                  Garantir a passagem de ar, impedir que alimentos entrem no
+                  sistema respiratório durante a deglutição (ato de engolir).
+                </p>
+                <img
+                  class="more"
+                  src="assets/img/icons8-plus.svg"
+                  style="
+                    position: absolute;
+                    bottom: 10px;
+                    right: 18px;
+                    cursor: pointer;
+                    transition-duration: 0.2s;
+                    transition-timing-function: ease-in-out;
+                  "
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row rowlmao">
+          <div class="col-md-6 colyo">
+            <div
+              class="card info-cards-top"
+              data-aos="zoom-in"
+              style="border-style: none; border-radius: 0px"
+            >
+              <div class="card-body">
+                <h4 class="card-title">Laringe</h4>
+                <h6 class="text-muted card-subtitle mb-2">Terceiro órgão</h6>
+                <p class="card-text randomp">
+                  Ela permite a passagem de ar quando respiramos e também impede
+                  que corpos estranhos adentrem as vias respiratórias
+                  inferiores, causando infecções nos pulmões.
+                </p>
+                <img
+                  class="more"
+                  src="assets/img/icons8-plus.svg"
+                  style="
+                    position: absolute;
+                    bottom: 10px;
+                    right: 18px;
+                    cursor: pointer;
+                    transition-duration: 0.2s;
+                    transition-timing-function: ease-in-out;
+                  "
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 colyo">
+            <div
+              class="card info-cards-top"
+              data-aos="zoom-in"
+              style="border-style: none; border-radius: 0px"
+            >
+              <div class="card-body">
+                <h4 class="card-title">Traqueia</h4>
+                <h6 class="text-muted card-subtitle mb-2">Quarto órgão</h6>
+                <p class="card-text randomp">
+                  Ela filtra, umedece e aquece o ar para conduzi-lo aos pulmões.
+                </p>
+                <img
+                  class="more"
+                  src="assets/img/icons8-plus.svg"
+                  style="
+                    position: absolute;
+                    bottom: 10px;
+                    right: 18px;
+                    cursor: pointer;
+                    transition-duration: 0.2s;
+                    transition-timing-function: ease-in-out;
+                  "
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center py-5">
+            <p class="fs-5 fw-bold text-muted">Descrição aleatória</p>
+            <h2
+              class="display-6 fw-bold mb-4 firsttopic"
+              style="margin-bottom: 16px"
+            >
+              Primeiro tópico
+            </h2>
+            <p class="fs-5 descp" style="max-width: 302px">
+              Descrição principal.&nbsp;Lorem ipsum dolor sit amet,
+              consectetur&nbsp;
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="container containerlol">
+        <div class="row">
+          <div class="col-md-12">
+            <div
+              class="card"
+              data-aos="fade-up"
+              style="border-style: none; height: 569px; border-radius: 0px"
+            >
+              <div
+                class="card-body d-sm-flex align-items-center justify-content-md-center"
+                style="
+                  position: relative;
+                  overflow-x: hidden;
+                  padding-top: 46px;
+                  padding-bottom: 46px;
+                  padding-left: 28px;
+                  padding-right: 28px;
+                "
+              >
+                <div
+                  class="d-flex flex-column anatomytopics"
+                  style="position: relative; margin-top: 0px"
+                >
+                  <div
+                    class="d-flex justify-content-center align-items-center titleslol"
+                  >
+                    <h4
+                      class="text-center itemtitles item-transitions"
+                      id="titleItem"
+                      style="margin-bottom: 0px"
+                    >
+                      Fossas nasais
+                    </h4>
+                    <img
+                      id="imgItem"
+                      class="number item-transitions"
+                      src="assets/img/icons8-1-circulado.svg"
+                    />
+                  </div>
+                  <h6
+                    class="fs-5 text-center text-muted mb-2 itemtitles item-transitions"
+                    id="subtitleItem"
+                  >
+                    Localização
+                  </h6>
+                  <p
+                    class="text-center itemdesc item-transitions"
+                    id="descItem"
+                  >
+                    No item um, é possível ver as fossas nasais, e como elas se
+                    ligam aos outros órgão do S.R.<br />
+                  </p>
+                  <div
+                    class="align-self-end controls"
+                    style="display: inline; z-index: 4"
+                  >
+                    <img
+                      id="leftArrow"
+                      class="controlarrows"
+                      src="assets/img/icons8-menor-que.svg"
+                      style="width: 16px"
+                    /><img
+                      id="bottomImgItem"
+                      src="assets/img/icons8-1-circulado.svg"
+                      style="margin-left: 0px; margin-right: 0px; width: 36px"
+                    /><img
+                      id="rightArrow"
+                      class="controlarrows"
+                      src="assets/img/icons8-maior-que.svg"
+                      style="width: 16px"
+                    />
+                  </div>
+                </div>
+                <img src="assets/img/mdoel.png" class="modelhi" /><img
+                  class="modelhi2x modelhi"
+                  src="assets/img/mdoel2x.png"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="observed-item"
+      style="height: fit-content; overflow: hidden"
+    >
+      <div
+        class="d-flex flex-column my-5 topics-container"
+        style="background: var(--bs-black); padding: 12px"
+      >
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 text-center text-light pt-5">
+              <p class="fs-5 fw-semibold text-light">Descrição aleatória</p>
+              <div class="caption v-middle text-center">
+                <h1 class="cd-headline clip">
+                  <span class="blc">Cha | </span>
+                  <span class="cd-words-wrapper">
+                    <b class="is-visible">Topic1.</b>
+                    <b>Topic2.</b>
+                    <b>Topic3.</b>
+                  </span>
+                </h1>
+              </div>
+              <p class="fs-5 text-light descp" style="max-width: 302px">
+                Descrição principal.&nbsp;Lorem ipsum dolor sit amet,
+                consectetur&nbsp;
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="container d-flex flex-grow-1 justify-content-center align-items-center"
+        >
+          <div class="row">
+            <div class="col-md-12">
+              <div
+                class="card text-light fs-4 info-item"
+                data-aos="fade-right"
+                style="background: transparent"
+              >
+                <div class="card-body">
+                  <div class="d-flex align-items-center">
+                    <img
+                      src="assets/img/icons8-1-circulado%20(1).svg"
+                      class="info-number"
+                    />
+                    <h4
+                      class="display-6 fw-semibold"
+                      style="margin-bottom: 0px"
+                    >
+                      Title
+                    </h4>
+                  </div>
+                  <h6 class="display-6 text-light card-subtitle mb-2">
+                    Subtitle
+                  </h6>
+                  <p class="fs-5 card-text">
+                    Nullam id dolor id nibh ultricies vehicula ut id elit. Cras
+                    justo odio, dapibus ac facilisis in, egestas eget quam.
+                    Donec id elit non mi porta gravida at eget metus.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center pb-5">
+            <p class="fs-5 fw-bold text-muted">Descrição aleatória</p>
+            <h2
+              class="display-6 fw-bold mb-4 firsttopic"
+              style="margin-bottom: 16px"
+            >
+              Primeiro tópico
+            </h2>
+            <p class="fs-5 descp" style="max-width: 302px">
+              Descrição principal.&nbsp;Lorem ipsum dolor sit amet,
+              consectetur&nbsp;
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="container containerlol">
+        <div class="row gy-4">
+          <div class="col-md-6">
+            <div
+              class="card cards-info cards-info-third-topic"
+              style="border-radius: 0px; border-style: none"
+            >
+              <div class="card-body">
+                <h4 class="card-title">Title</h4>
+                <h6 class="text-muted card-subtitle mb-2">Subtitle</h6>
+                <p class="card-text">
+                  Nullam id dolor id nibh ultricies vehicula ut id elit. Cras
+                  justo odio, dapibus ac facilisis in, egestas eget quam. Donec
+                  id elit non mi porta gravida at eget metus.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div
+              class="card cards-info cards-info-third-topic"
+              style="
+                border-radius: 0px;
+                border-style: none;
+                margin-bottom: 1.5rem;
+              "
+            >
+              <div class="card-body">
+                <h4 class="card-title">Title</h4>
+                <h6 class="text-muted card-subtitle mb-2">Subtitle</h6>
+                <p class="card-text">
+                  Nullam id dolor id nibh ultricies vehicula ut id elit. Cras
+                  justo odio, dapibus ac facilisis in, egestas eget quam. Donec
+                  id elit non mi porta gravida at eget metus.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container containerlol">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card" style="border-style: none; border-radius: 0px">
+              <div class="card-body">
+                <h4 class="card-title">Title</h4>
+                <h6 class="text-muted card-subtitle mb-2">Subtitle</h6>
+                <p class="card-text" style="max-width: 464px">
+                  Nullam id dolor id nibh ultricies vehicula ut id elit. Cras
+                  justo odio, dapibus ac facilisis in, egestas eget quam. Donec
+                  id elit non mi porta gravida at eget metus.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="text-center" style="margin-top: 24px">
+      <div class="container text-muted py-4 py-lg-5">
+        <ul class="list-inline">
+          <li class="list-inline-item me-4">
+            <a class="link-secondary" href="#">Anatomia</a>
+          </li>
+          <li class="list-inline-item me-4">
+            <a class="link-secondary" href="#">Mecânica</a>
+          </li>
+          <li class="list-inline-item me-4">
+            <a class="link-secondary" href="#">Química</a>
+          </li>
+          <li class="list-inline-item">
+            <a class="link-secondary" href="#">Painel de Controle</a>
+          </li>
+        </ul>
+        <ul class="list-inline">
+          <li class="list-inline-item me-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              fill="currentColor"
+              viewBox="0 0 16 16"
+              class="bi bi-facebook"
+            >
+              <path
+                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"
+              ></path>
+            </svg>
+          </li>
+          <li class="list-inline-item me-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              fill="currentColor"
+              viewBox="0 0 16 16"
+              class="bi bi-twitter"
+            >
+              <path
+                d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
+              ></path>
+            </svg>
+          </li>
+          <li class="list-inline-item">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              fill="currentColor"
+              viewBox="0 0 16 16"
+              class="bi bi-instagram"
+            >
+              <path
+                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+              ></path>
+            </svg>
+          </li>
+        </ul>
+        <p class="mb-0">Copyright © 2022 Respiração</p>
+      </div>
+    </footer>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="assets/js/Animated-Type-Heading.js"></script>
+    <script type="module" src="assets/js/anime.js"></script>
+    <script src="assets/js/listeners.js"></script>
+  </body>
+</html>
