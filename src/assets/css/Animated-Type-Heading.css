@@ -2,7 +2,7 @@
   display: inline-block;
   position: relative;
   text-align: left;
-  font-size: 58px;
+  font-size: 54px;
 }
 
 .cd-words-wrapper b {
@@ -14,18 +14,18 @@
 }
 
 .blc {
-  font-size: 58px;
+  font-size: 54px;
 }
 
 @media (max-width: 488px) {
   .blc, .cd-words-wrapper {
-    font-size: 55px;
+    font-size: 38px;
   }
 }
 
 @media (max-width: 400px) {
   .blc, .cd-words-wrapper {
-    font-size: 45px;
+    font-size: 28px;
   }
 }
 
