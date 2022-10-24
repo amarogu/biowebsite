@@ -89,6 +89,22 @@ body {
   .randomp {
     max-width: 295px;
   }
+
+  .randomp-smaller {
+    max-width: 264px;
+  }
+}
+
+@media (min-width: 768px) {
+  .randomp-smaller {
+    max-width: 174px;
+  }
+}
+
+@media (min-width: 992px) {
+  .randomp-smaller {
+    max-width: 264px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -232,13 +248,118 @@ body {
   height: 540.984px;
 }
 
-.topics-container {
-  height: 657px;
+/*.topics-container {
+  height: 766px;
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 482px) {
   .topics-container {
-    height: 779px;
+    height: 824px;
   }
 }
 
+@media (min-width: 725px) {
+  .topics-container {
+    height: 964px;
+  }
+}
+
+@media (min-width: 792px) {
+  .topics-container
+} */
+
+@media (min-width: 1504px) {
+  .topics-container {
+    height: 1048px;
+  }
+
+  .more-info {
+    transform: translateY(-44%);
+  }
+
+  .more-info-container {
+    justify-content: end !important;
+    margin-right: 38px;
+    text-align: center;
+  }
+
+  .more-info-title-up {
+    width: 488px;
+  }
+
+  .more-info-title-item {
+    justify-content: center;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+
+  .more-info-subtitle-item {
+    margin-bottom: 12px !important;
+  }
+}
+
+@media (min-width: 1920px) {
+  .topics-container {
+    height: 1194px;
+  }
+
+  .more-info {
+    transform: translateY(-38%);
+  }
+}
+
+@media (min-width: 2000px) {
+  .more-info {
+    align-self: center;
+    max-width: 1920px;
+  }
+}
+
+@media (min-width: 576px) {
+  .item2img {
+    width: 30% !important;
+    margin-right: 44px;
+  }
+}
+
+@media (min-width: 494px) and (max-width: 576px) {
+  .randomp {
+    max-width: 60%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .item2img {
+    width: 35% !important;
+  }
+
+  .text-container {
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .item2img {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .item2img {
+    margin-right: 42px;
+    margin-left: 42px;
+    margin-top: 22px !important;
+    margin-bottom: 22px !important;
+    width: 25% !important;
+  }
+}
+
+.item2img {
+  transition-property: transform;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+}
+
+.card-items:hover .item2img {
+  transform: scale(1.1);
+}
