@@ -5,9 +5,9 @@ import img3 from "../img/icons8-3-circulado.svg";
 import img4 from "../img/icons8-4-circulado.svg";
 import img5 from "../img/icons8-5-circulado.svg";
 const addBtns = document.querySelectorAll(".more");
-// const p = document.querySelectorAll(".disp");
+const p = document.querySelectorAll(".disp");
 let count = 1;
-/*const dataSetFirstFalse = [
+const dataSetFirstFalse = [
   "Visão geral",
   "Composição do S.R.",
   "São órgão do sistema respiratório: fossas nasais, faringe, laringe, traqueia, brônquios, bronquíolos, alvéolos e pulmões. ",
@@ -22,23 +22,53 @@ const dataSetSecondTrue = [
   "Brônquios",
   "Quinto órgão",
   "Ajudar a filtrar o ar que respiramos e aquecer e umidificar o ar que chegará aos pulmões.",
-];*/
+];
+const dataSetThirdFalse = [
+  "Faringe",
+  "Segundo órgão",
+  "Garantir a passagem de ar, impedir que alimentos entrem no sistema respiratório durante a deglutição (ato de engolir).",
+];
+const dataSetThirdTrue = [
+  "Bronquíolos",
+  "Sexto órgão",
+  "Transportar o ar aos alvéolos pulmonares, onde ocorre a hematose (troca gasosa).",
+];
+const dataSetFourthFalse = [
+  "Laringe",
+  "Terceiro órgão",
+  "Ela permite a passagem de ar quando respiramos e também impede que corpos estranhos adentrem as vias respiratórias inferiores, causando infecções nos pulmões.",
+];
+const dataSetFourthTrue = [
+  "Alvéolos",
+  "Sétimo órgão",
+  "Local de realização de trocas gasosas, em que o gás carbônico, presente no sangue, passa para o interior dos alvéolos, e o oxigênio, presente no ar inspirado, passa, do interior dos alvéolos, para o sangue, esse processo é chamado de hematose.",
+];
+const dataSetFifthFalse = [
+  "Traqueia",
+  "Quarto órgão",
+  "Ela filtra, umedece e aquece o ar para conduzi-lo aos pulmões.",
+];
+const dataSetFifthTrue = [
+  "Pulmões",
+  "Oitavo órgão",
+  "Captar oxigênio e livrar-se do dióxido de carbono (CO2).",
+];
 addBtns.forEach((btn) => {
   btn.addEventListener("click", (e) => {
     if (count === 1) {
       btn.style.transform = "rotate(45deg)";
-      /*p.forEach((p) =>
+      p.forEach((p) =>
         anime({
           targets: p,
           translateX: -55,
           opacity: 0,
         })
-      );*/
-      /*if (e.target === addBtns[0]) {
+      );
+      if (e.target === addBtns[0]) {
         console.log("Data will be defined later...");
       } else if (e.target === addBtns[1]) {
         defineData(subject, "");
-      }*/
+      }
       count++;
     } else {
       btn.style.transform = "rotate(0)";
