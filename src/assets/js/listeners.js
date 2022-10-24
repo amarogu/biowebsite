@@ -1,4 +1,9 @@
 // import anime from "./anime.js";
+import img1 from "../img/icons8-1-circulado.svg";
+import img2 from "../img/icons8-2-circulado.svg";
+import img3 from "../img/icons8-3-circulado.svg";
+import img4 from "../img/icons8-4-circulado.svg";
+import img5 from "../img/icons8-5-circulado.svg";
 const addBtns = document.querySelectorAll(".more");
 // const p = document.querySelectorAll(".disp");
 let count = 1;
@@ -78,7 +83,7 @@ const defineId = (arrow) => {
 
 const defineData = (item, title, imgSourceId, subtitle, desc) => {
   item.title = title;
-  item.imgSource = `assets/img/icons8-${imgSourceId}-circulado.svg`;
+  item.imgSource = `${imgSourceId}`;
   item.subtitle = subtitle;
   item.desc = desc;
 };
@@ -120,7 +125,7 @@ arrows.forEach((arrow) =>
       defineData(
         item,
         "Fossas nasais",
-        1,
+        img1,
         "Localização",
         "No item um, é possível ver as fossas nasais, e como elas se ligam aos outros órgão do S.R."
       );
@@ -128,7 +133,7 @@ arrows.forEach((arrow) =>
       defineData(
         item,
         "Laringe",
-        2,
+        img2,
         "😋❌🥒",
         "No item dois é possível ver a laringe, um órgão que também se responsabiliza pela filtragem do ar."
       );
@@ -136,7 +141,7 @@ arrows.forEach((arrow) =>
       defineData(
         item,
         "Traqueia",
-        3,
+        img3,
         "♨🌫",
         "A traqueia, localizada no item três, aquece e umedece o ar, preparando-os para a entrada no pulmão."
       );
@@ -144,7 +149,7 @@ arrows.forEach((arrow) =>
       defineData(
         item,
         "Pulmões",
-        4,
+        img4,
         "😀🎉",
         "No item quatro podemos ver os pulmões, que captam oxigênio e livram-se de dióxido de carbono."
       );
@@ -152,7 +157,7 @@ arrows.forEach((arrow) =>
       defineData(
         item,
         "Diafragma",
-        5,
+        img5,
         "💪🏻🎉😃",
         "No item cinco podemos ver o diafragma, um músculo estriado esquelético que separa a cavidade abdominal da cavidade toráxica."
       );
@@ -200,7 +205,7 @@ observedItems.forEach((item) => {
   observer.observe(item);
 });*/
 
-const warning = document.getElementById("warning");
+/*const warning = document.getElementById("warning");
 const backgroundNotActive = document.getElementById("backgroundNotActive");
 const closeBtn = document.getElementById("closeBtn");
 const body = document.body;
@@ -209,4 +214,4 @@ closeBtn.addEventListener("click", () => {
   warning.classList.remove("d-flex");
   backgroundNotActive.style.display = "none";
   body.style = "";
-});
+});*/
