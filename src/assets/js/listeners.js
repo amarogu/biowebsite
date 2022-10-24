@@ -7,12 +7,52 @@ import img5 from "../img/icons8-5-circulado.svg";
 const addBtns = document.querySelectorAll(".more");
 const p = document.querySelectorAll(".disp");
 let count = 1;
+const firstElements = [
+  document.getElementById("one"),
+  document.getElementById("two"),
+  document.getElementById("three"),
+  document.getElementById("four"),
+  document.getElementById("five"),
+];
+const secondElements = [
+  document.getElementById("one2"),
+  document.getElementById("two2"),
+  document.getElementById("three2"),
+  document.getElementById("four2"),
+  document.getElementById("five2"),
+];
+const thirdElements = [
+  document.getElementById("one3"),
+  document.getElementById("two3"),
+  document.getElementById("three3"),
+  document.getElementById("four3"),
+  document.getElementById("five3"),
+];
+const fourthElements = [
+  document.getElementById("one4"),
+  document.getElementById("two4"),
+  document.getElementById("three4"),
+  document.getElementById("four4"),
+  document.getElementById("five4"),
+];
+const fifthElements = [
+  document.getElementById("one5"),
+  document.getElementById("two5"),
+  document.getElementById("three5"),
+  document.getElementById("four5"),
+  document.getElementById("five5"),
+];
+
 const dataSetFirstFalse = [
   "Visão geral",
   "Composição do S.R.",
   "São órgão do sistema respiratório: fossas nasais, faringe, laringe, traqueia, brônquios, bronquíolos, alvéolos e pulmões. ",
 ];
-const dataSetFirstTrue = [undefined, undefined, undefined];
+const dataSetFirstTrue = [
+  "Visão geral",
+  "Composição do sistema respiratório",
+  "Os órgãos do sistema respiratório e como cada um deles funciona 🎉",
+];
 const dataSetSecondFalse = [
   "Fossas nasais",
   "Primeiro órgão",
@@ -21,7 +61,7 @@ const dataSetSecondFalse = [
 const dataSetSecondTrue = [
   "Brônquios",
   "Quinto órgão",
-  "Ajudar a filtrar o ar que respiramos e aquecer e umidificar o ar que chegará aos pulmões.",
+  "Os brônquios são responsáveis por encaminhar o ar a traqueia e aos pulmões 🌫",
 ];
 const dataSetThirdFalse = [
   "Faringe",
@@ -53,30 +93,199 @@ const dataSetFifthTrue = [
   "Oitavo órgão",
   "Captar oxigênio e livrar-se do dióxido de carbono (CO2).",
 ];
+
+let target;
+
 addBtns.forEach((btn) => {
   btn.addEventListener("click", (e) => {
+    // To do: fix the count bug
     if (count === 1) {
+      count++;
       btn.style.transform = "rotate(45deg)";
-      p.forEach((p) =>
+      /*p.forEach((p) =>
         anime({
           targets: p,
           translateX: -55,
           opacity: 0,
         })
-      );
+      );*/
       if (e.target === addBtns[0]) {
-        console.log("Data will be defined later...");
+        defineCardData(
+          subject,
+          dataSetFirstTrue[0],
+          dataSetFirstTrue[1],
+          dataSetFirstTrue[2],
+          e.target
+        );
+        renderCardData(firstElements, true);
       } else if (e.target === addBtns[1]) {
-        defineData(subject, "");
+        defineCardData(
+          subject,
+          dataSetSecondTrue[0],
+          dataSetSecondTrue[1],
+          dataSetSecondTrue[2],
+          e.target
+        );
+        renderCardData(secondElements, true);
+      } else if (e.target === addBtns[2]) {
+        defineCardData(
+          subject,
+          dataSetThirdTrue[0],
+          dataSetThirdTrue[1],
+          dataSetThirdTrue[2],
+          e.target
+        );
+        renderCardData(thirdElements, true);
+      } else if (e.target === addBtns[3]) {
+        defineCardData(
+          subject,
+          dataSetFourthTrue[0],
+          dataSetFourthTrue[1],
+          dataSetFourthTrue[2],
+          e.target
+        );
+        renderCardData(fourthElements, true);
+      } else if (e.target === addBtns[4]) {
+        defineCardData(
+          subject,
+          dataSetFifthTrue[0],
+          dataSetFifthTrue[1],
+          dataSetFifthTrue[2],
+          e.target
+        );
+        renderCardData(fifthElements, true);
       }
-      count++;
+      console.log(subject);
     } else {
-      btn.style.transform = "rotate(0)";
       count = 1;
+      btn.style.transform = "rotate(0)";
+      if (e.target === addBtns[0]) {
+        defineCardData(
+          subject,
+          dataSetFirstFalse[0],
+          dataSetFirstFalse[1],
+          dataSetFirstFalse[2],
+          e.target
+        );
+        renderCardData(firstElements, false);
+      } else if (e.target === addBtns[1]) {
+        defineCardData(
+          subject,
+          dataSetSecondFalse[0],
+          dataSetSecondFalse[1],
+          dataSetSecondFalse[2],
+          e.target
+        );
+        renderCardData(secondElements, false);
+      } else if (e.target === addBtns[2]) {
+        defineCardData(
+          subject,
+          dataSetThirdFalse[0],
+          dataSetThirdFalse[1],
+          dataSetThirdFalse[2],
+          e.target
+        );
+        renderCardData(thirdElements, false);
+      } else if (e.target === addBtns[3]) {
+        defineCardData(
+          subject,
+          dataSetFourthFalse[0],
+          dataSetFourthFalse[1],
+          dataSetFourthFalse[2],
+          e.target
+        );
+        renderCardData(fourthElements, false);
+      } else if (e.target === addBtns[4]) {
+        defineCardData(
+          subject,
+          dataSetFifthFalse[0],
+          dataSetFifthFalse[1],
+          dataSetFifthFalse[2],
+          e.target
+        );
+        renderCardData(fifthElements, false);
+      }
+      console.log(subject);
     }
     // setTimeout(() => renderItem());
   });
 });
+
+let topCard;
+const renderCardData = (element, inOut) => {
+  if (element === firstElements) {
+    topCard = true;
+  } else {
+    topCard = false;
+  }
+  element.forEach((elementIn) => {
+    if (elementIn !== element[3]) {
+      opacityManager(elementIn, false);
+    } else {
+      if (inOut) {
+        elementIn.style.opacity = "0";
+      } else {
+        opacityManager(elementIn, false);
+      }
+    }
+
+    if (inOut) {
+      if (elementIn === element[4]) {
+        elementIn.style.backgroundColor = "#00aee0";
+      }
+
+      if (elementIn === element[1]) {
+        elementIn.classList.remove("text-muted");
+      }
+      elementIn.style.color = "#f8f9fa";
+    }
+  });
+  setTimeout(() => {
+    renderItem(element[0], false, subject.title);
+    renderItem(element[1], false, subject.subtitle);
+    renderItem(element[2], false, subject.content);
+  }, 200);
+  setTimeout(() => {
+    element.forEach((elementIn) => {
+      if (elementIn !== element[3]) {
+        opacityManager(elementIn, true);
+      } else {
+        if (inOut) {
+          elementIn.style.opacity = "0";
+        } else {
+          opacityManager(elementIn, true);
+        }
+      }
+
+      if (!inOut) {
+        if (elementIn === element[4]) {
+          if (topCard) {
+            elementIn.style.backgroundColor = "#f7f7f7";
+          } else {
+            elementIn.style.backgroundColor = "#ffffff";
+          }
+        }
+
+        if (elementIn === element[1]) {
+          elementIn.classList.add("text-muted");
+        }
+        elementIn.style.color = "#212529";
+      }
+    });
+  }, 200);
+  if (inOut) {
+    subject.rendered = true;
+  } else {
+    subject.rendered = false;
+  }
+};
+
+const defineCardData = (subject, title, subtitle, content, id) => {
+  subject.title = title;
+  subject.subtitle = subtitle;
+  subject.content = content;
+  subject.id = id;
+};
 
 const rightArrow = document.getElementById("rightArrow");
 const leftArrow = document.getElementById("leftArrow");
@@ -146,6 +355,8 @@ const subject = {
   title: "",
   subtitle: "",
   content: "",
+  rendered: false,
+  id: HTMLElement,
 };
 
 arrows.forEach((arrow) =>
