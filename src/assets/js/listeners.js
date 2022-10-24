@@ -456,3 +456,13 @@ closeBtn.addEventListener("click", () => {
   backgroundNotActive.style.display = "none";
   body.style = "";
 });*/
+const observedItem = document.querySelector(".observed-item");
+const body = document.body;
+const scroller = document.getElementById("scroller");
+window.addEventListener("scroll", () => {
+  if (observedItem.getBoundingClientRect().y < 0) {
+    console.log("Observed");
+    body.style.overflow = "hidden";
+    scroll.style.overflowY = "scroll";
+  }
+});
