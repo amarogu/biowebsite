@@ -4,6 +4,9 @@ import img2 from "../img/icons8-2-circulado.svg";
 import img3 from "../img/icons8-3-circulado.svg";
 import img4 from "../img/icons8-4-circulado.svg";
 import img5 from "../img/icons8-5-circulado.svg";
+import img6 from "../img/icons8-1-circulado (1).svg";
+import img7 from "../img/icons8-2-circulado (1).svg";
+import img8 from "../img/icons8-3-circulado (1).svg";
 const addBtns = document.querySelectorAll(".more");
 const p = document.querySelectorAll(".disp");
 let count = 1;
@@ -456,13 +459,254 @@ closeBtn.addEventListener("click", () => {
   backgroundNotActive.style.display = "none";
   body.style = "";
 });*/
-const observedItem = document.querySelector(".observed-item");
+/*const observedItem = document.querySelector(".observed-item");
 const body = document.body;
 const scroller = document.getElementById("scroller");
 window.addEventListener("scroll", () => {
   if (observedItem.getBoundingClientRect().y < 0) {
     console.log("Observed");
-    body.style.overflow = "hidden";
-    scroll.style.overflowY = "scroll";
+    observedItem.style.position = "fixed";
+    observedItem.style.top = "-60px";
   }
+});*/
+
+const sectionItems = document.getElementById("sectionItems");
+/*const dataFirst = [
+  "Title",
+  "Subtitle",
+  "Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.",
+  img6,
+  document.querySelector(".first-card"),
+  {
+    titleElement: document.querySelector(".first-title"),
+    subtitleElement: document.querySelector(".first-subtitle"),
+    contentElement: document.querySelector(".first-content"),
+    img: document.getElementById("first-image"),
+  },
+];
+const dataSecond = [
+  "Title",
+  "Subtitle",
+  "Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.",
+  img7,
+  document.querySelector(".second-card"),
+  {
+    titleElement: document.querySelector(".second-title"),
+    subtitleElement: document.querySelector(".second-subtitle"),
+    contentElement: document.querySelector(".second-content"),
+    img: document.getElementById("second-image"),
+  },
+];
+const dataThird = [
+  "Title",
+  "Subtitle",
+  "Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.",
+  img8,
+  document.querySelector(".third-card"),
+  {
+    titleElement: document.querySelector(".third-title"),
+    subtitleElement: document.querySelector(".third-subtitle"),
+    contentElement: document.querySelector(".third-content"),
+    img: document.getElementById("third-image"),
+  },
+];
+
+const itemCard1 = {
+  title: "",
+  subtitle: "",
+  content: "",
+  img: "",
+};
+
+const itemCard2 = {
+  title: "",
+  subtitle: "",
+  content: "",
+  img: "",
+};
+
+const itemCard3 = {
+  title: "",
+  subtitle: "",
+  content: "",
+  img: "",
+};
+
+const defineItemData1 = (title, subtitle, content, img) => {
+  itemCard1.title = title;
+  itemCard1.subtitle = subtitle;
+  itemCard1.content = content;
+  itemCard1.img = `${img}`;
+};
+
+const defineItemData2 = (title, subtitle, content, img) => {
+  itemCard2.title = title;
+  itemCard2.subtitle = subtitle;
+  itemCard2.content = content;
+  itemCard2.img = `${img}`;
+};
+
+const defineItemData3 = (title, subtitle, content, img) => {
+  itemCard3.title = title;
+  itemCard3.subtitle = subtitle;
+  itemCard3.content = content;
+  itemCard3.img = `${img}`;
+};
+
+const renderItemData = (element, itemCard) => {
+  element[5].titleElement.innerHTML = itemCard.title;
+  element[5].subtitleElement.innerHTML = itemCard.subtitle;
+  element[5].contentElement.innerHTML = itemCard.content;
+  element[5].img.setAttribute("src", itemCard.img);
+};
+
+let itemCounter = -1;
+
+sectionItems.addEventListener("click", () => {
+  itemCounter++;
+  if (itemCounter === 3) {
+    itemCounter = 0;
+  }
+  switch (itemCounter) {
+    case 0:
+      defineItemData1(
+        dataSecond[0],
+        dataSecond[1],
+        dataSecond[2],
+        dataSecond[3]
+      );
+      defineItemData2(dataThird[0], dataThird[1], dataThird[2], dataThird[3]);
+      defineItemData3(dataFirst[0], dataFirst[1], dataFirst[2], dataFirst[3]);
+      renderItemData(dataFirst, itemCard1);
+      renderItem(dataSecond, itemCard2);
+      renderItem(dataThird, itemCard3);
+      break;
+    case 1:
+      defineItemData(
+        dataSecond[0],
+        dataSecond[1],
+        dataSecond[2],
+        dataSecond[3]
+      );
+      renderItemData(dataSecond);
+      break;
+    case 3:
+      defineItemData(dataThird[0], dataThird[1], dataThird[2], dataThird[3]);
+      renderItemData(dataThird);
+      break;
+    default:
+      console.log("An error has occurred.");
+  }
+});*/
+
+const firstTitle = document.querySelector(".first-title");
+const firstSubtitle = document.querySelector(".first-subtitle");
+const firstContent = document.querySelector(".first-content");
+const firstImage = document.getElementById("first-image");
+const firstItemElements = [firstTitle, firstSubtitle, firstContent, firstImage];
+
+const secondTitle = document.querySelector(".second-title");
+const secondSubtitle = document.querySelector(".second-subtitle");
+const secondContent = document.querySelector(".second-content");
+const secondImage = document.getElementById("second-image");
+const secondItemElements = [
+  secondTitle,
+  secondSubtitle,
+  secondContent,
+  secondImage,
+];
+
+const thirdTitle = document.querySelector(".third-title");
+const thirdSubtitle = document.querySelector(".third-subtitle");
+const thirdContent = document.querySelector(".third-content");
+const thirdImage = document.getElementById("third-image");
+const thirdItemElements = [thirdTitle, thirdSubtitle, thirdContent, thirdImage];
+
+const first = {
+  title: "",
+  subtitle: "",
+  content: "",
+  image: "",
+};
+
+const second = {
+  title: "",
+  subtitle: "",
+  content: "",
+  image: "",
+};
+
+const third = {
+  title: "",
+  subtitle: "",
+  content: "",
+  image: "",
+};
+
+const defineItemData = (element, title, subtitle, content, image) => {
+  element.title = title;
+  element.subtitle = subtitle;
+  element.content = content;
+  element.image = `${image}`;
+};
+
+const renderFirstItemData = () => {
+  firstTitle.innerHTML = first.title;
+  firstSubtitle.innerHTML = first.subtitle;
+  firstContent.innerHTML = first.content;
+  firstImage.setAttribute("src", first.image);
+};
+
+const renderSecondItemData = () => {
+  secondTitle.innerHTML = second.title;
+  secondSubtitle.innerHTML = second.subtitle;
+  secondContent.innerHTML = second.content;
+  secondImage.setAttribute("src", second.image);
+};
+
+const renderThirdItemData = () => {
+  thirdTitle.innerHTML = third.title;
+  thirdSubtitle.innerHTML = third.subtitle;
+  thirdContent.innerHTML = third.content;
+  thirdImage.setAttribute("src", third.image);
+};
+
+let clickCounter = 0;
+sectionItems.addEventListener("click", () => {
+  clickCounter++;
+
+  if (clickCounter === 1) {
+    defineItemData(second, "Title", "Subtitle", "Content", img8);
+    defineItemData(third, "Title", "Subtitle", "Content", img6);
+    defineItemData(first, "Title", "Subtitle", "Content", img7);
+  } else if (clickCounter === 2) {
+    defineItemData(third, "Title", "Subtitle", "Content", img7);
+    defineItemData(first, "Title", "Subtitle", "Content", img8);
+    defineItemData(second, "Title", "Subtitle", "Content", img6);
+  } else if (clickCounter === 3) {
+    defineItemData(first, "Title", "Subtitle", "Content", img6);
+    defineItemData(second, "Title", "Subtitle", "Content", img7);
+    defineItemData(third, "Title", "Subtitle", "Content", img8);
+  }
+
+  firstItemElements.forEach((element) => opacityManager(element, false));
+  secondItemElements.forEach((element) => opacityManager(element, false));
+  thirdItemElements.forEach((element) => opacityManager(element, false));
+  setTimeout(() => {
+    renderFirstItemData();
+    renderSecondItemData();
+    renderThirdItemData();
+  }, 200);
+  setTimeout(() => {
+    firstItemElements.forEach((element) => opacityManager(element, true));
+    secondItemElements.forEach((element) => opacityManager(element, true));
+    thirdItemElements.forEach((element) => opacityManager(element, true));
+  }, 200);
+
+  if (clickCounter === 3) {
+    clickCounter = 0;
+  }
+
+  console.log(first, second, third);
+  console.log(clickCounter);
 });
