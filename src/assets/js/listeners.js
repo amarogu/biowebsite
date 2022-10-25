@@ -676,17 +676,71 @@ sectionItems.addEventListener("click", () => {
   clickCounter++;
 
   if (clickCounter === 1) {
-    defineItemData(second, "Title", "Subtitle", "Content", img8);
-    defineItemData(third, "Title", "Subtitle", "Content", img6);
-    defineItemData(first, "Title", "Subtitle", "Content", img7);
+    defineItemData(
+      second,
+      "Diferenças",
+      "Diferenças entre a inspiração e expiração.",
+      "Resumindo, a pressão interna na expiração é maior do que na inspiração, mas tem mais!",
+      img8
+    );
+    defineItemData(
+      third,
+      "Expiração",
+      "O que é a expiração?",
+      "A expiração consiste no conjunto de movimentos que resulta na retirada do ar do interior das vias respiratórias um processo fundamental para garantir a retirada de gás carbônico no nosso organismo e é determinado pelo relaxamento dos músculos intercostais e do diafragma.",
+      img6
+    );
+    defineItemData(
+      first,
+      "Inspiração",
+      "O que é a inspiração?",
+      "A inspiração é o processo que controla a entrada de ar para os pulmões e é determinada pela contração do diafragma e dos músculos intercostais, levando a expansão da caixa torácica e diminuição da pressão em seu interior.",
+      img7
+    );
   } else if (clickCounter === 2) {
-    defineItemData(third, "Title", "Subtitle", "Content", img7);
-    defineItemData(first, "Title", "Subtitle", "Content", img8);
-    defineItemData(second, "Title", "Subtitle", "Content", img6);
+    defineItemData(
+      third,
+      "Inspiração",
+      "O que é a inspiração?",
+      "A inspiração é o processo que controla a entrada de ar para os pulmões e é determinada pela contração do diafragma e dos músculos intercostais, levando a expansão da caixa torácica e diminuição da pressão em seu interior.",
+      img7
+    );
+    defineItemData(
+      first,
+      "Diferenças",
+      "Diferenças entre a inspiração e expiração.",
+      "Resumindo, a pressão interna na expiração é maior do que na inspiração, mas tem mais!",
+      img8
+    );
+    defineItemData(
+      second,
+      "Expiração",
+      "O que é a expiração?",
+      "A expiração consiste no conjunto de movimentos que resulta na retirada do ar do interior das vias respiratórias um processo fundamental para garantir a retirada de gás carbônico no nosso organismo e é determinado pelo relaxamento dos músculos intercostais e do diafragma.",
+      img6
+    );
   } else if (clickCounter === 3) {
-    defineItemData(first, "Title", "Subtitle", "Content", img6);
-    defineItemData(second, "Title", "Subtitle", "Content", img7);
-    defineItemData(third, "Title", "Subtitle", "Content", img8);
+    defineItemData(
+      first,
+      "Expiração",
+      "O que é a expiração?",
+      "A expiração consiste no conjunto de movimentos que resulta na retirada do ar do interior das vias respiratórias um processo fundamental para garantir a retirada de gás carbônico no nosso organismo e é determinado pelo relaxamento dos músculos intercostais e do diafragma.",
+      img6
+    );
+    defineItemData(
+      second,
+      "Inspiração",
+      "O que é a inspiração?",
+      "A inspiração é o processo que controla a entrada de ar para os pulmões e é determinada pela contração do diafragma e dos músculos intercostais, levando a expansão da caixa torácica e diminuição da pressão em seu interior.",
+      img7
+    );
+    defineItemData(
+      third,
+      "Diferenças",
+      "Diferenças entre a inspiração e expiração.",
+      "Resumindo, a pressão interna na expiração é maior do que na inspiração, mas tem mais!",
+      img8
+    );
   }
 
   firstItemElements.forEach((element) => opacityManager(element, false));
