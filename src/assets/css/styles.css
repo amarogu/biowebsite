@@ -248,6 +248,12 @@ body {
   height: 540.984px;
 }
 
+@media (max-width: 768px) {
+  .cards-info-third-topic {
+    height: fit-content;
+  }
+}
+
 /*.topics-container {
   height: 766px;
 }
@@ -422,4 +428,44 @@ body {
 
 #sectionItems {
   cursor: pointer;
+}
+
+@media (min-width: 992px) {
+  .item-description {
+    max-width: 394px;
+  }
+}
+
+.third-item-img {
+  width: 50%;
+}
+
+@media (min-width: 768px) {
+  .third-item-img {
+    width: 25%;
+    margin-right: 84px;
+    margin-left: 84px;
+  }
+}
+
+@media (min-width: 992px) {
+  .third-item-title {
+    font-size: 48px;
+  }
+
+  .third-item-subtitle {
+    font-size: 24px;
+  }
+
+  .third-item-description {
+    font-size: 18px;
+    max-width: 494px;
+  }
+}
+
+.third-section .containerlol .card-body {
+  padding-top: 38px;
+  padding-right: 38px;
+  padding-left: 38px;
+  padding-bottom: 38px;
 }

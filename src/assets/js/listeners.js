@@ -680,7 +680,7 @@ sectionItems.addEventListener("click", () => {
       second,
       "Diferenças",
       "Diferenças entre a inspiração e expiração.",
-      "Resumindo, a pressão interna na expiração é maior do que na inspiração, mas tem mais!",
+      "Resumindo, a pressão interna na expiração é maior do que na inspiração, mas tem mais! Será explicado quais são as diferenças entre estes movimentos mecânicos que ocorrem ao respirarmos!",
       img8
     );
     defineItemData(
@@ -709,7 +709,7 @@ sectionItems.addEventListener("click", () => {
       first,
       "Diferenças",
       "Diferenças entre a inspiração e expiração.",
-      "Resumindo, a pressão interna na expiração é maior do que na inspiração, mas tem mais!",
+      "Resumindo, a pressão interna na expiração é maior do que na inspiração, mas tem mais! Será explicado quais são as diferenças entre estes movimentos mecânicos que ocorrem ao respirarmos!",
       img8
     );
     defineItemData(
@@ -738,7 +738,7 @@ sectionItems.addEventListener("click", () => {
       third,
       "Diferenças",
       "Diferenças entre a inspiração e expiração.",
-      "Resumindo, a pressão interna na expiração é maior do que na inspiração, mas tem mais!",
+      "Resumindo, a pressão interna na expiração é maior do que na inspiração, mas tem mais! Será explicado quais são as diferenças entre estes movimentos mecânicos que ocorrem ao respirarmos!",
       img8
     );
   }
