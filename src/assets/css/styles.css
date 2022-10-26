@@ -469,3 +469,23 @@ body {
   padding-left: 38px;
   padding-bottom: 38px;
 }
+
+.content-image {
+  cursor: pointer;
+}
+
+.images-image {
+  border-radius: 14px;
+}
+
+.images-description {
+  max-width: 484px;
+}
+
+/*.images-container-content {
+  
+}*/
+
+html {
+  scroll-behavior: smooth;
+}
