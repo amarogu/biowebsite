@@ -290,8 +290,8 @@ const questionTwoData = {
 };
 
 const questionThreeData = {
-  title: "Qual das definições abaixo é a correta quanto à hematose?",
-  description: "Pergunta / Descrição sobre o exercício!",
+  title: "Pergunta 3",
+  description: "Qual das definições abaixo é a correta quanto à hematose?",
   answers: [
     "É a entrada de oxigênio nos alvéolos, que passam para os vasos sanguíneos capilares, que por sua vez, liberam gás carbônico.",
     "É a troca de hemácias que ocorre quando expiramos.",
