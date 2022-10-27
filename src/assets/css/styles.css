@@ -486,6 +486,24 @@ body {
   
 }*/
 
+.custom-control-input {
+  outline: 0;
+  border: none;
+  background-color: #dfe3e7;
+}
+
+#questionOne, #questionTwo, #questionThree, #questionFour, #questionFive {
+  display: none;
+}
+
+#progressAnswers {
+  border-radius: 8px;
+}
+
+#answers {
+  display: none;
+}
+
 html {
   scroll-behavior: smooth;
 }

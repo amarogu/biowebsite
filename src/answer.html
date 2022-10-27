@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>Respiração</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/Montserrat.css" />
+    <link rel="stylesheet" href="assets/css/Animated-Type-Heading.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <link rel="stylesheet" href="assets/css/Navbar-With-Button-icons.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/stylesimages.css" />
+  </head>
+  <body>
+    <div class="position-fixed" style="top: 14px; left: 14px">
+      <a href="index.html">
+        <img
+          src="assets/img/icons8-menor-que.svg"
+          style="width: 24px; height: 24px"
+          alt=""
+        />
+      </a>
+    </div>
+    <div
+      class="d-flex justify-content-center align-items-center w-100 vh-100"
+      id="bodyContainer"
+    >
+      <form class="w-50" style="max-width: 484px">
+        <div class="form-group mb-4">
+          <label class="mb-2" for="exampleInputEmail1">Endereço de Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            aria-describedby="emailHelp"
+            placeholder="Insira o Email"
+          />
+          <small id="emailHelp" class="form-text text-muted"
+            >Nós não iremos compartilhar seu endereço de email com mais
+            ninguém.</small
+          >
+        </div>
+        <div class="form-group mb-4">
+          <label class="mb-2" for="exampleInputPassword1">Senha</label>
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            placeholder="Senha"
+          />
+        </div>
+        <div class="w-75 mb-4" id="messages">
+          Para prosseguir para responder o formulário, por favor crie uma conta
+          😃
+        </div>
+        <button id="sign-up-btn" type="submit" class="btn btn-primary">
+          Sign Up
+        </button>
+        <button id="log-in-up-btn" type="submit" class="btn btn-primary">
+          LogIn
+        </button>
+      </form>
+    </div>
+    <div class="d-none w-100 vh-100" id="successContainer">
+      <h2 class="mb-4" style="max-width: 384px">
+        Questionário sobre o Sistema Respiratório
+      </h2>
+      <p style="max-width: 384px">
+        Bem vindo (a) <span id="userEmail"></span>, para responder o
+        questionário basta clicar no botão!
+        <a
+          class="d-block btn btn-primary mt-4"
+          id="answerButton"
+          style="max-width: 284px"
+          >Responder!</a
+        >
+      </p>
+    </div>
+    <div id="questionsContainer"></div>
+    <div id="answersContainer">
+      <div
+        class="justify-content-center align-items-center w-100 vh-100"
+        id="answers"
+      >
+        <div style="max-width: 384px">
+          <h2 class="mb-2">Você completou o formulário!</h2>
+          <p class="mn-1" id="descriptionParagraph">
+            O seu resultado pode ser visto a seguir!
+          </p>
+          <p id="paragraph">
+            Resultado <span class="text-primary" id="numberAnswers">100%</span>
+          </p>
+          <div
+            class="w-100 bg-primary"
+            id="progressAnswers"
+            style="height: 12px"
+          ></div>
+        </div>
+      </div>
+    </div>
+    <!--<form
+      class="w-100 vh-100 justify-content-center align-items-center"
+      action=""
+      id="questionTwo"
+    >
+      <div>
+        <div class="d-flex align-items-center">
+          <img class="me-2" src="assets/img/icons8-1-circulado.svg" alt="" />
+          <h2 class="mb-0">Pergunta 1</h2>
+        </div>
+        <p>Pergunta / Descrição sobre o exercício!</p>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="exampleRadios"
+            id="exampleRadios1"
+            value="option1"
+          />
+          <label class="form-check-label" for="exampleRadios1"> Opção 1 </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="exampleRadios"
+            id="exampleRadios2"
+            value="option2"
+          />
+          <label class="form-check-label" for="exampleRadios2"> Opção 2 </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="exampleRadios"
+            id="exampleRadios2"
+            value="option2"
+          />
+          <label class="form-check-label" for="exampleRadios2"> Opção 3 </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="exampleRadios"
+            id="exampleRadios2"
+            value="option2"
+          />
+          <label class="form-check-label" for="exampleRadios2"> Opção 4 </label>
+        </div>
+        <div>
+          <a class="btn btn-primary nextQuestionButton"> Próxima questão </a>
+        </div>
+      </div>
+    </form>
+    <form
+      class="w-100 vh-100 justify-content-center align-items-center"
+      action=""
+      id="questionThree"
+    >
+      <div>
+        <div class="d-flex align-items-center">
+          <img class="me-2" src="assets/img/icons8-1-circulado.svg" alt="" />
+          <h2 class="mb-0">Pergunta 1</h2>
+        </div>
+        <p>Pergunta / Descrição sobre o exercício!</p>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="exampleRadios"
+            id="exampleRadios1"
+            value="option1"
+          />
+          <label class="form-check-label" for="exampleRadios1"> Opção 1 </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="exampleRadios"
+            id="exampleRadios2"
+            value="option2"
+          />
+          <label class="form-check-label" for="exampleRadios2"> Opção 2 </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="exampleRadios"
+            id="exampleRadios2"
+            value="option2"
+          />
+          <label class="form-check-label" for="exampleRadios2"> Opção 3 </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="exampleRadios"
+            id="exampleRadios2"
+            value="option2"
+          />
+          <label class="form-check-label" for="exampleRadios2"> Opção 4 </label>
+        </div>
+        <div>
+          <a class="btn btn-primary nextQuestionButton"> Próxima questão </a>
+        </div>
+      </div>
+    </form>
+    <form
+      class="w-100 vh-100 justify-content-center align-items-center"
+      action=""
+      id="questionFour"
+    >
+      <div>
+        <div class="d-flex align-items-center">
+          <img class="me-2" src="assets/img/icons8-1-circulado.svg" alt="" />
+          <h2 class="mb-0">Pergunta 1</h2>
+        </div>
+        <p>Pergunta / Descrição sobre o exercício!</p>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="exampleRadios"
+            id="exampleRadios1"
+            value="option1"
+          />
+          <label class="form-check-label" for="exampleRadios1"> Opção 1 </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="exampleRadios"
+            id="exampleRadios2"
+            value="option2"
+          />
+          <label class="form-check-label" for="exampleRadios2"> Opção 2 </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="exampleRadios"
+            id="exampleRadios2"
+            value="option2"
+          />
+          <label class="form-check-label" for="exampleRadios2"> Opção 3 </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="exampleRadios"
+            id="exampleRadios2"
+            value="option2"
+          />
+          <label class="form-check-label" for="exampleRadios2"> Opção 4 </label>
+        </div>
+        <div>
+          <a class="btn btn-primary nextQuestionButton"> Próxima questão </a>
+        </div>
+      </div>
+    </form>
+    <form
+      class="w-100 vh-100 justify-content-center align-items-center"
+      action=""
+      id="questionFive"
+    >
+      <div>
+        <div class="d-flex align-items-center">
+          <img class="me-2" src="assets/img/icons8-1-circulado.svg" alt="" />
+          <h2 class="mb-0">Pergunta 1</h2>
+        </div>
+        <p>Pergunta / Descrição sobre o exercício!</p>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="exampleRadios"
+            id="exampleRadios1"
+            value="option1"
+          />
+          <label class="form-check-label" for="exampleRadios1"> Opção 1 </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="exampleRadios"
+            id="exampleRadios2"
+            value="option2"
+          />
+          <label class="form-check-label" for="exampleRadios2"> Opção 2 </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="exampleRadios"
+            id="exampleRadios2"
+            value="option2"
+          />
+          <label class="form-check-label" for="exampleRadios2"> Opção 3 </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="exampleRadios"
+            id="exampleRadios2"
+            value="option2"
+          />
+          <label class="form-check-label" for="exampleRadios2"> Opção 4 </label>
+        </div>
+        <div>
+          <a class="btn btn-primary nextQuestionButton"> Próxima questão </a>
+        </div>
+      </div>
+    </form> -->
+    <script type="module" src="assets/js/firebaseScript.js"></script>
+  </body>
+</html>
