@@ -509,7 +509,9 @@ body {
 }
 
 @media (min-width: 768px) {
-  width: 50%;
+  .form-container {
+    width: 50%;
+  }
 }
 
 html {
