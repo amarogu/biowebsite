@@ -498,6 +498,9 @@ body {
 
 #progressAnswers {
   border-radius: 8px;
+  transition-property: width;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
 }
 
 #answers {

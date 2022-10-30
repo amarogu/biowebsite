@@ -39,20 +39,20 @@
     >
       <form class="form-container" style="max-width: 484px">
         <div class="form-group mb-4">
-          <label class="mb-2" for="exampleInputEmail1">Endereço de Email</label>
+          <label class="mb-2" for="exampleInputEmail1">Nome de usuário</label>
           <input
             type="email"
             class="form-control"
             id="email"
             aria-describedby="emailHelp"
-            placeholder="Insira o Email"
+            placeholder="Insira um nickname que te identifique!"
           />
           <small id="emailHelp" class="form-text text-muted"
-            >Nós não iremos compartilhar seu endereço de email com mais
-            ninguém.</small
+            >Insira um nickname que possa ser utilizado para sua
+            identificação.</small
           >
         </div>
-        <div class="form-group mb-4">
+        <!--<div class="form-group mb-4">
           <label class="mb-2" for="exampleInputPassword1">Senha</label>
           <input
             type="password"
@@ -60,14 +60,14 @@
             id="password"
             placeholder="Senha"
           />
-        </div>
+        </div>-->
         <div class="w-75 mb-4" id="messages">
           Para prosseguir para responder o formulário, por favor crie uma conta
           😃
         </div>
-        <button id="sign-up-btn" type="submit" class="btn btn-primary">
+        <!--<button id="sign-up-btn" type="submit" class="btn btn-primary">
           Sign Up
-        </button>
+        </button>-->
         <button id="log-in-up-btn" type="submit" class="btn btn-primary">
           LogIn
         </button>
@@ -79,7 +79,11 @@
       </h2>
       <p style="max-width: 384px">
         Bem vindo (a) <span id="userEmail"></span>, para responder o
-        questionário basta clicar no botão! <span class="text-primary">4 - 5</span> acertos: MB, <span class="text-primary">3</span> acertos: B, <span class="text-primary">2</span> acertos: R, <span class="text-primary">1</span> acerto: I.
+        questionário basta clicar no botão!
+        <span class="text-primary">4 - 5</span> acertos: MB,
+        <span class="text-primary">3</span> acertos: B,
+        <span class="text-primary">2</span> acertos: R,
+        <span class="text-primary">1</span> acerto: I.
         <a
           class="d-block btn btn-primary mt-4"
           id="answerButton"
@@ -100,12 +104,13 @@
             O seu resultado pode ser visto a seguir!
           </p>
           <p id="paragraph">
-            Resultado <span class="text-primary" id="numberAnswers">100%</span>
+            Resultado
+            <span class="text-primary" id="numberAnswers">Carregando...</span>
           </p>
           <div
-            class="w-100 bg-primary"
+            class="bg-primary"
             id="progressAnswers"
-            style="height: 12px"
+            style="width: 0px; height: 12px"
           ></div>
         </div>
       </div>

@@ -5,6 +5,7 @@ import {
   getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  signInAnonymously,
 } from "firebase/auth";
 import { getFirestore, doc, setDoc, getDoc } from "firebase/firestore";
 import img1 from "../img/icons8-1-circulado.svg";
@@ -32,11 +33,11 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const auth = getAuth(app);
 const firestore = getFirestore(app);
-const signUpBtn = document.getElementById("sign-up-btn");
+// const signUpBtn = document.getElementById("sign-up-btn");
 const emailString = document.getElementById("email");
 let emailStringExtracted = emailString.value;
-const passwordString = document.getElementById("password");
-let passwordStringExtracted = passwordString.value;
+// const passwordString = document.getElementById("password");
+// let passwordStringExtracted = passwordString.value;
 const messages = document.getElementById("messages");
 const bodyContainer = document.getElementById("bodyContainer");
 const userEmail = document.getElementById("userEmail");
@@ -131,6 +132,72 @@ passwordString.addEventListener("change", () => {
 const descriptionParagraph = document.getElementById("descriptionParagraph");
 const paragraph = document.getElementById("paragraph");
 
+logInUpBtn.addEventListener("click", async (e) => {
+  e.preventDefault();
+  emailStringExtracted = emailString.value;
+  if (emailStringExtracted === "") {
+    messages.innerHTML = "Insira os dados!";
+    return;
+  }
+  await getDoc(doc(firestore, "users", emailStringExtracted)).then(
+    (docSnap) => {
+      if (docSnap.exists()) {
+        answers.classList.add("d-flex");
+        bodyContainer.classList.remove("d-flex");
+        bodyContainer.classList.add("d-none");
+        numberAnswers.classList.add("d-none");
+        progressAnswers.classList.add("d-none");
+        descriptionParagraph.innerHTML =
+          "Você já completou o formulário ou o usuário já existe! Para voltar à tela inicial, basta clicar na seta de retorno!";
+        paragraph.classList.add("d-none");
+        return;
+      } else {
+        console.log("Document does not exist.");
+        firstLogInScreen(emailString);
+      }
+    }
+  );
+  await setDoc(doc(firestore, "users", emailStringExtracted), {
+    user: emailStringExtracted,
+    answers: selectedAnswers,
+    answered: false,
+  });
+  questionsContainer.innerHTML = questions;
+  const nextQuestionButton = document.getElementById("nextQuestionButton");
+  addNextButtonEventListener(nextQuestionButton);
+  /*signInAnonymously(auth)
+    .then(() => {
+      auth.name = emailStringExtracted;
+      getDoc(doc(firestore, "users", auth.currentUser.uid)).then((docSnap) => {
+        if (docSnap.exists()) {
+          if (docSnap.data().answered) {
+            answers.classList.add("d-flex");
+            bodyContainer.classList.remove("d-flex");
+            bodyContainer.classList.add("d-none");
+            numberAnswers.classList.add("d-none");
+            progressAnswers.classList.add("d-none");
+            descriptionParagraph.innerHTML =
+              "Você já completou o formulário! Para voltar à tela inicial, basta clicar na seta de retorno!";
+            paragraph.classList.add("d-none");
+          }
+        } else {
+          console.log("Document does not exist.");
+          firstLogInScreen(auth.name);
+        }
+        questionsContainer.innerHTML = questions;
+        const nextQuestionButton =
+          document.getElementById("nextQuestionButton");
+        addNextButtonEventListener(nextQuestionButton);
+      });
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.log(errorCode, errorMessage);
+    });*/
+});
+
+/*
 signUpBtn.addEventListener("click", (e) => {
   e.preventDefault();
   passwordStringExtracted = passwordString.value;
@@ -229,7 +296,7 @@ logInUpBtn.addEventListener("click", (e) => {
       }
     });
   console.log(auth.currentUser);
-});
+});*/
 
 const firstLogInScreen = (userCredential) => {
   bodyContainer.classList.remove("d-flex");
@@ -239,7 +306,7 @@ const firstLogInScreen = (userCredential) => {
   successContainer.classList.add("flex-column");
   successContainer.classList.add("align-items-center");
   successContainer.classList.add("justify-content-center");
-  userEmail.innerHTML = `${userCredential.user.email}`;
+  userEmail.innerHTML = `${userCredential}`;
 };
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -330,8 +397,6 @@ const questionFiveData = {
 const questionThree = document.getElementById("questionThree");
 const questionFour = document.getElementById("questionFour");
 const questionFive = document.getElementById("questionFive"); */
-let currentQuestion;
-let previousQuestionLocal;
 let counter = 1;
 let selectedAnswer;
 let selectedAnswers = [];
@@ -410,8 +475,8 @@ const loadAnswersData = async (question) => {
   let answersCount = 0;
   answers.classList.add("d-flex");
   question.classList.remove("d-flex");
-  await setDoc(doc(firestore, "users", auth.currentUser.uid), {
-    uid: auth.currentUser.uid,
+  await setDoc(doc(firestore, "users", emailStringExtracted), {
+    user: emailStringExtracted,
     answers: selectedAnswers,
     answered: true,
   });
@@ -420,7 +485,7 @@ const loadAnswersData = async (question) => {
       snap = docSnap.data();
     }
   );
-  await getDoc(doc(firestore, "users", auth.currentUser.uid)).then(
+  await getDoc(doc(firestore, "users", emailStringExtracted)).then(
     (docSnap) => {
       userSnap = docSnap.data();
     }
@@ -447,27 +512,29 @@ const loadAnswersData = async (question) => {
 
   if (answersCount === 0) {
     numberAnswers.innerHTML = "0%";
-    progressAnswers.classList.remove("w-100");
+    // progressAnswers.classList.remove("w-100");
     progressAnswers.style.width = "0%";
   } else if (answersCount === 1) {
     numberAnswers.innerHTML = "20%";
-    progressAnswers.classList.remove("w-100");
+    // progressAnswers.classList.remove("w-100");
     progressAnswers.style.width = "20%";
   } else if (answersCount === 2) {
     numberAnswers.innerHTML = "40%";
-    progressAnswers.classList.remove("w-100");
+    // progressAnswers.classList.remove("w-100");
     progressAnswers.style.width = "40%";
   } else if (answersCount === 3) {
     numberAnswers.innerHTML = "60%";
-    progressAnswers.classList.remove("w-100");
+    // progressAnswers.classList.remove("w-100");
     progressAnswers.style.width = "60%";
   } else if (answersCount === 4) {
     numberAnswers.innerHTML = "80%";
-    progressAnswers.classList.remove("w-100");
+    // progressAnswers.classList.remove("w-100");
     progressAnswers.style.width = "80%";
   } else if (answersCount === 5) {
     numberAnswers.innerHTML = "100%";
-    progressAnswers.classList.remove("w-100");
+    // progressAnswers.classList.remove("w-100");
     progressAnswers.style.width = "100%";
   }
 };
+
+// Auth management through firestore database, since there is no need for credential usage, only user identification such as nickname. THERE IS NO SENSITIVE DATA BEING STORED IN THIS APP!
