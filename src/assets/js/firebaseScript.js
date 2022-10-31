@@ -164,7 +164,7 @@ logInUpBtn.addEventListener("click", async (e) => {
   });
   questionsContainer.innerHTML = questions;
   const nextQuestionButton = document.getElementById("nextQuestionButton");
-  addNextButtonEventListener(nextQuestionButton);
+  addNextButtonEventListener(nextQuestionButton, answerButton);
   /*signInAnonymously(auth)
     .then(() => {
       auth.name = emailStringExtracted;
@@ -401,7 +401,7 @@ let counter = 1;
 let selectedAnswer;
 let selectedAnswers = [];
 
-const addNextButtonEventListener = (nextQuestionButton) => {
+const addNextButtonEventListener = (nextQuestionButton, answerButton) => {
   const questionOne = document.getElementById("questionOne");
   const questionImage = document.getElementById("questionImage");
   const questionTitle = document.getElementById("questionTitle");
