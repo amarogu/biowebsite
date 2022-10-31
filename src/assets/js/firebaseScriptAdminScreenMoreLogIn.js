@@ -1,5 +1,5 @@
 // Import the functions you need from the SDKs you need
-/*import { initializeApp } from "firebase/app";
+import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import {
   getAuth,
@@ -32,16 +32,13 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const auth = getAuth(app);
-const firestore = getFirestore(app);*/
+const firestore = getFirestore(app);
 const logInUpButton = document.getElementById("log-in-up-btn");
 // const signUpBtn = document.getElementById("sign-up-btn");
 const emailString = document.getElementById("email");
 let emailStringExtracted = emailString.value;
 const passwordString = document.getElementById("password");
 let passwordStringExtracted = passwordString.value;
-const bodyContainer = document.getElementById("bodyContainer");
-const chartsAnswers = document.getElementById("chartsAnswers");
-const tableDataAnswers = document.getElementById("tableDataAnswers");
 // const passwordString = document.getElementById("password");
 // let passwordStringExtracted = passwordString.value;
 
@@ -60,8 +57,7 @@ logInUpButton.addEventListener("click", (e) => {
   )
     .then((userCredentials) => {
       console.log(userCredentials.user);
-      bodyContainer.classList.add("d-none");
-      chartsAnswers.classList.remove("d-none");
+      window.open('../adminScreen.html')
     })
     .catch((error) => {
       const errorCode = error.code;

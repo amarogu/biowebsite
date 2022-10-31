@@ -48,9 +48,9 @@ const refreshButtonAdminScreenMore = document.getElementById(
 );
 let answersCounter = 0;
 
-document.addEventListener("DOMContentLoaded", () => {
-  getData();
-});
+document.addEventListener('DOMContentLoaded', () => {
+    getData();
+})
 
 refreshButtonAdminScreenMore.addEventListener("click", () => {
   getData();
