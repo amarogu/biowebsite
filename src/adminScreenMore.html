@@ -1,43 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
     <title>Admin Screen</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/Montserrat.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-</head>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/Montserrat.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
 
-<body>
-    <div class="p-4">
-        <h1 class="text-center">Questões</h1>
-        <div class="d-flex justify-content-center">
-            <div class="table-responsive flex-grow-1 p-4" style="max-width: 484px;">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Nome</th>
-                            <th>Questões</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Test</td>
-                            <td>5</td>
-                        </tr>
-                        <tr>
-                            <td>Test2</td>
-                            <td>5</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+  <body>
+    <div class="p-4 text-center">
+      <h1 class="text-center">Questões</h1>
+      <div class="d-flex justify-content-center">
+        <div class="table-responsive flex-grow-1 p-4" style="max-width: 484px">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th>Questões</th>
+              </tr>
+            </thead>
+            <tbody id="tableData"></tbody>
+          </table>
         </div>
+      </div>
+      <a class="btn btn-primary mt-4" id="refreshButtonAdminScreenMore"
+        >Atualizar.</a
+      >
     </div>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
-</body>
-
+    <script
+      type="module"
+      src="assets/js/firebaseScriptAdminScreenMore.js"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+  </body>
 </html>
