@@ -397,6 +397,8 @@ const questionFiveData = {
 const questionThree = document.getElementById("questionThree");
 const questionFour = document.getElementById("questionFour");
 const questionFive = document.getElementById("questionFive"); */
+let currentQuestion;
+let previousQuestionLocal;
 let counter = 1;
 let selectedAnswer;
 let selectedAnswers = [];
