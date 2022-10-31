@@ -1,4 +1,4 @@
-import { initializeApp } from "firebase/app";
+/*import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import {
   getAuth,
@@ -20,7 +20,7 @@ import img1 from "../img/icons8-1-circulado.svg";
 import img2 from "../img/icons8-2-circulado.svg";
 import img3 from "../img/icons8-3-circulado.svg";
 import img4 from "../img/icons8-4-circulado.svg";
-import img5 from "../img/icons8-5-circulado.svg";
+import img5 from "../img/icons8-5-circulado.svg";*/
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -37,6 +37,24 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  signInAnonymously,
+} from "firebase/auth";
+import { initializeApp } from "firebase/app";
+import {
+  where,
+  getFirestore,
+  doc,
+  setDoc,
+  getDoc,
+  collection,
+  getDocs,
+  query,
+} from "firebase/firestore";
+import { getAnalytics } from "firebase/analytics";
 const refreshButton = document.getElementById("refreshButton");
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
@@ -99,6 +117,8 @@ const chartInit = () => {
 };
 
 document.addEventListener("DOMContentLoaded", async () => {
+  /*console.log(auth.currentUser, "hi");  Hi! */
+  /* TEST */
   await getData(0);
   renderChartData(chartData);
   chartInit();
