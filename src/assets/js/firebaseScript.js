@@ -153,7 +153,7 @@ logInUpBtn.addEventListener("click", async (e) => {
         return;
       } else {
         console.log("Document does not exist.");
-        firstLogInScreen(emailString);
+        firstLogInScreen(emailStringExtracted);
       }
     }
   );
