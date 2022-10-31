@@ -148,7 +148,7 @@ logInUpBtn.addEventListener("click", async (e) => {
         numberAnswers.classList.add("d-none");
         progressAnswers.classList.add("d-none");
         descriptionParagraph.innerHTML =
-          "Você já completou o formulário ou o usuário já existe! Para voltar à tela inicial, basta clicar na seta de retorno!";
+          "Você já completou o formulário ou o usuário já está em uso! Para voltar à tela inicial, basta clicar na seta de retorno!";
         paragraph.classList.add("d-none");
         return;
       } else {

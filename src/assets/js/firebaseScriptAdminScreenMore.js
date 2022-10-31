@@ -48,15 +48,16 @@ const refreshButtonAdminScreenMore = document.getElementById(
 );
 let answersCounter = 0;
 
-document.addEventListener('DOMContentLoaded', () => {
-    getData();
-})
+document.addEventListener("DOMContentLoaded", () => {
+  getData();
+});
 
 refreshButtonAdminScreenMore.addEventListener("click", () => {
   getData();
 });
 
 const getData = async () => {
+  tableData.innerHTML = "";
   /*for (i = 1; i <= 4; i++) {
       queryManager(`answers[${question}]`, "===", `${i}`);
     }
